@@ -1,0 +1,46 @@
+# Simple Conceptual ERD
+Deparments
+-
+dept_no varchar pk
+dept_Name varchar
+
+
+Dept_Emp
+-
+emp_no int fk - Employees.emp_no 
+dept_no varchar fk - Deparments.dept_no
+from_date varchar
+to_date varchar
+
+Dept_Manager
+-
+dept_no varchar fk - Deparments.dept_no
+emp_no int fk - Employees.emp_no 
+from_date varchar
+to_date varchar
+
+
+Employees
+-
+emp_no int pk 
+birth_date varchar
+first_name varchar
+last_name varchar
+gender varchar
+hire_date varchar
+
+
+Salaries
+-
+emp_no int fk - Employees.emp_no 
+salary int
+from_date varchar
+to_date varchar
+
+
+Titles
+-
+emp_no int fk - Employees.emp_no 
+title varchar
+from_date varchar
+to_date varchar
